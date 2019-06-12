@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1039</width>
+    <height>712</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>532</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label_struct">
+          <property name="text">
+           <string>Structure: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTreeView" name="treeView_struct">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QSplitter" name="splitter_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <widget class="QSplitter" name="splitter">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_map">
+            <property name="text">
+             <string>Map: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGraphicsView" name="graphicsView_map"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <layout class="QVBoxLayout" name="verticalLayout_3"/>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_log">
+           <property name="text">
+            <string>Log: </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTextEdit" name="textEdit_log"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1039</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menuAdd">
+     <property name="title">
+      <string>Add...</string>
+     </property>
+     <addaction name="actionRoad"/>
+     <addaction name="actionJunction"/>
+     <addaction name="actionTrafficLight"/>
+    </widget>
+    <widget class="QMenu" name="menuEdit_2">
+     <property name="title">
+      <string>Edit</string>
+     </property>
+     <addaction name="actionEditRoad"/>
+    </widget>
+    <widget class="QMenu" name="menuRemove">
+     <property name="title">
+      <string>Remove</string>
+     </property>
+     <addaction name="actionRemoveJunction"/>
+    </widget>
+    <addaction name="menuAdd"/>
+    <addaction name="menuEdit_2"/>
+    <addaction name="menuRemove"/>
+   </widget>
+   <widget class="QMenu" name="menuTest">
+    <property name="title">
+     <string>Test</string>
+    </property>
+    <widget class="QMenu" name="menuPump">
+     <property name="title">
+      <string>Pump</string>
+     </property>
+     <addaction name="actionRoadPumpTest"/>
+     <addaction name="actionTrafficLightPumpTest"/>
+    </widget>
+    <widget class="QMenu" name="menuDump">
+     <property name="title">
+      <string>Dump</string>
+     </property>
+     <addaction name="actionRoadDumpTest"/>
+     <addaction name="actionTrafficLightDumpTest"/>
+    </widget>
+    <addaction name="menuPump"/>
+    <addaction name="menuDump"/>
+   </widget>
+   <widget class="QMenu" name="menuPlay">
+    <property name="title">
+     <string>Play</string>
+    </property>
+    <addaction name="actionStartPlay"/>
+    <addaction name="actionPausePlay"/>
+    <addaction name="actionStopPlay"/>
+    <addaction name="separator"/>
+    <addaction name="actionGotoPlay"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionRoadView"/>
+    <addaction name="actionJunctionView"/>
+   </widget>
+   <widget class="QMenu" name="menuvisualization">
+    <property name="title">
+     <string>Visualization</string>
+    </property>
+    <addaction name="actionRoadVisual"/>
+    <addaction name="actionTrafficLightVisual"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuPlay"/>
+   <addaction name="menuvisualization"/>
+   <addaction name="menuTest"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionConfigure">
+   <property name="text">
+    <string>Configure...</string>
+   </property>
+  </action>
+  <action name="actionConfig">
+   <property name="text">
+    <string>Config...</string>
+   </property>
+  </action>
+  <action name="actionTrafficLight">
+   <property name="text">
+    <string>Traffic light</string>
+   </property>
+  </action>
+  <action name="actionRoad">
+   <property name="text">
+    <string>Road</string>
+   </property>
+  </action>
+  <action name="actionJunction">
+   <property name="text">
+    <string>Junction</string>
+   </property>
+  </action>
+  <action name="actionVideo">
+   <property name="text">
+    <string>Video</string>
+   </property>
+  </action>
+  <action name="actionRoadPumpTest">
+   <property name="text">
+    <string>Road</string>
+   </property>
+  </action>
+  <action name="actionTrafficLightPumpTest">
+   <property name="text">
+    <string>Traffic Light</string>
+   </property>
+  </action>
+  <action name="actionRoadDumpTest">
+   <property name="text">
+    <string>Road</string>
+   </property>
+  </action>
+  <action name="actionTrafficLightDumpTest">
+   <property name="text">
+    <string>Traffic Light</string>
+   </property>
+  </action>
+  <action name="actionStartPlay">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </action>
+  <action name="actionPausePlay">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Pause</string>
+   </property>
+  </action>
+  <action name="actionStopPlay">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionRoadView">
+   <property name="text">
+    <string>Road</string>
+   </property>
+  </action>
+  <action name="actionJunctionView">
+   <property name="text">
+    <string>Junction</string>
+   </property>
+  </action>
+  <action name="actionGotoPlay">
+   <property name="text">
+    <string>Goto ...</string>
+   </property>
+  </action>
+  <action name="actionEditRoad">
+   <property name="text">
+    <string>Road</string>
+   </property>
+  </action>
+  <action name="actionRoadVisual">
+   <property name="text">
+    <string>Road</string>
+   </property>
+  </action>
+  <action name="actionTrafficLightVisual">
+   <property name="text">
+    <string>Traffic Light</string>
+   </property>
+  </action>
+  <action name="actionRemoveJunction">
+   <property name="text">
+    <string>Junction</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
